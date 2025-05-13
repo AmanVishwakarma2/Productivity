@@ -1,0 +1,1 @@
+// This file is not needed when using the Vite plugin for Tailwind CSS v4 
