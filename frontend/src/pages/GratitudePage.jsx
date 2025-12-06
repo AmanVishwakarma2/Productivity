@@ -7,6 +7,7 @@ import { useProgress } from '../contexts/progressContext';
 import Navbar from '../components/Navbar';
 import DailyProgress from '../components/DailyProgress';
 import { useAuth } from '../hooks/useAuth';
+import { API_URL } from '../config';
 
 // Constants for localStorage
 const PROGRESS_DATA_KEY = 'progress_data';
