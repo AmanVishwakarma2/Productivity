@@ -11,8 +11,7 @@ console.log('Storage module: Environment loaded');
 
 // Load MongoDB connection string from config.json
 try {
-  const config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
-  console.log('Storage module: Config loaded successfully');
+
 
   // MongoDB Connection
   mongoose.connect(config.connectionString, {
