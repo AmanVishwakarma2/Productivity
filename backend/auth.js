@@ -9,10 +9,12 @@ import express from 'express';
 
 // Load environment variables
 dotenv.config();
+
 console.log('Auth module: Environment variables loaded');
 
 // Get JWT secret from environment variables
-const JWT_SECRET = process.env.JWT_SECRET ;
+const JWT_SECRET = process.env.JWT_SECRET;
+console.log('this is the jwt secret,process.env.JWT_SECRET);
 console.log('Auth module: JWT secret configured');
 
 // Create router for auth routes
