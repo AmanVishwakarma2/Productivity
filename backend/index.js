@@ -12,16 +12,12 @@ console.log('Server: Environment variables loaded');
 
 // Create Express app
 const app = express();
-console.log('Server: Express app created');
+
 
 // Load configuration
 try {
-  const config = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
-  console.log('Server: Configuration loaded successfully');
-  
-  // MongoDB Connection
-  console.log('Server: Attempting to connect to MongoDB...');
-  mongoose.connect(config.connectionString, {
+
+  mongoose.connect(process.env.MONGODB_URI, {
     serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of 30s
     socketTimeoutMS: 45000, // Close sockets after 45s of inactivity
   })
